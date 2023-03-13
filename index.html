@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HomeWork: 2 Virtual Reality</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="description" content="Geometry elements floating on the sky" />
+
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="changecolor.js"></script>
+    <script src="rotation-cylinder.js"></script>
+    <script src="movement.js"></script>
+  </head>
+  <body>
+    <a-scene cursor="rayOrigin:mouse">
+      <a-assets>
+        <img src="paris.jpg" id="paris" />
+        <img src="concrete.jpg" id="concrete" />
+      </a-assets>
+      <a-sphere
+        position="0 2 -4"
+        radius="0.5"
+        color="cyan"
+        change-color
+        movement
+      ></a-sphere>
+      <a-plane
+        position="0 0 -4"
+        rotation="-90 0 0"
+        width="4"
+        height="4"
+        src="#concrete"
+      ></a-plane>
+      <a-cylinder
+        position="-4 4 -4"
+        rotation="0 0 0"
+        height="3"
+        radius="0.75"
+        color="#FF0321"
+        rotation-cylinder
+      >
+      </a-cylinder>
+      <a-sky src="#paris"></a-sky>
+    </a-scene>
+  </body>
+</html>
